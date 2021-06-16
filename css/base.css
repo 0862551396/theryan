@@ -1,0 +1,356 @@
+
+
+
+* { 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+}
+
+
+
+html {
+    font-family: Arial, Helvetica, sans-serif;  
+    scroll-behavior: smooth; 
+    margin: 0;
+    background-color: #18191a;
+}
+
+#app { 
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #18191a;
+    display: none;
+}
+
+.avatar {
+    border-radius: 50%;
+}
+
+.no-active {
+    color: #a1a4a8;
+}
+
+.text-color {
+    color: #b0b3b8;
+}
+
+.top-color {
+    background-color: #242526;
+}
+.middle-color {
+    background-color: #18191a;
+}
+
+
+.mt-4 {
+    margin-top: 4px;
+}
+.mt-6 {
+    margin-top: 6px;
+}
+.mt-8 {
+    margin-top: 8px;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mt-32 {
+    margin-top: 32px;
+}
+
+.mf-4 {
+    margin-left: 4px;
+}
+
+.mf-10 {
+    margin-left: 10px;
+}
+
+.mf-16 {
+    margin-left: 16px;
+}
+
+
+/* BUTTON */
+
+.btn-delete,
+.btn-accept {
+    width: 125px;    
+    height: 34px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    font-weight: 600;
+    color: #feffff;
+    background-color: #2d88ff;
+    cursor: pointer;
+}
+
+.btn-delete {
+    background-color: #ffffff1a;
+}
+
+
+/* icon */
+.ti-search,
+.ti-more {
+    width: 16px;
+    height: 16px;
+    color: #9da0a4;
+}
+
+/* Circle */
+.circle {
+    width: 12px;
+    height: 12px;
+    background-color: #31a24c;
+    border-radius: 50%;
+    border: 2px solid #18191a;
+    position: absolute;
+    top: 32px;
+    left: 35px;
+}
+
+
+
+/* plus */
+.plus {
+    position: absolute;
+    top: -16px;
+    left: 39px;
+    width: 32px;
+    height: 32px;
+    background-color: rgb(45, 136, 255);
+    border-radius: 50%;
+    border: 3.5px solid #242526;
+}
+
+.plus .ti-plus {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 4px;
+}
+
+/* Arrow right */
+.arrow-right {
+    display: block;
+    width: 48px;
+    height: 48px;
+    background-color: #3a3b3c;
+    align-items: center;
+    padding: 15px 0 0 15px;
+    border-radius: 50%;
+    position: absolute;
+    top: 75px;
+    right: -25px;
+}
+.arrow-right:hover {
+    background-color: #4c4c4c;
+    cursor: pointer;
+}
+
+.arrow-right > i {
+    display: block;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+}
+
+.arrow-right:hover .subtitles {
+    display: block;
+}
+
+.arrow-right .subtitles {
+    top: 50px;
+    left: -24px;
+}
+
+.arrow-right .subtitles > span {
+    width: 80px;
+}
+
+a  {
+    text-decoration: none;
+}
+
+
+
+/* AVATARRRRRRRRRRRRRRRRRRRR */
+
+.status-content__avatar {
+    display: block;
+    position: relative;
+    width: 590px;    
+    height: 448px;
+    border-bottom: 1px solid #3e4042;
+}
+
+.status-content__avatar-background > img,
+.status-content__avatar-background {
+    width: 590px;    
+    height: 222px;
+}
+
+.status-content__avatar-content > img {
+    width: 388px;    
+    height: 388px;
+    border-radius: 50%;
+    border: 2px solid #3e4042;
+    position: absolute;
+    top: 30px;
+    left: 101px;
+}
+
+
+
+/* Phụ đề */
+.subtitles {
+    height: 32px;
+    background-color: #bdc3cc;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    border-radius: 6px;
+    display: none;
+}
+
+.subtitles > span {
+    display: block;
+    margin: 8px 8px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.Two-words {
+    width: 60px;
+}
+
+/* EMOTIONS */
+.all-emotions {
+    display: flex;
+    position: absolute;
+    background-color: #242323;
+    display: none;
+    top: -48px;
+    left: 2px;
+    width: 325px;
+    height: 44px;
+    border-radius: 30px;
+    animation: appear ease-in-out .5s;
+}
+
+
+.connect {
+    position: absolute;
+    top: 42px;
+    left: 0;
+    width: 325px;
+    height: 10px;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(50%)
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.all-emotions > img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* VIDEO BACKGROUND */
+
+#loop-video {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+    /* display: none; */
+}
+
+/* .loop-video__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #03a9f4;
+    mix-blend-mode: overlay;
+    z-index: 1;
+} */
+
+.loop-video__text {
+    z-index: 1;
+    line-height: 50px;
+    font-family: 'Baloo Tammudu 2', cursive;
+    font-size: 20px;
+    opacity: 0.8;
+}
+
+.loop-video__content {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    width: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0.9;
+}
+
+#loop-video__check {
+    display: none;
+}
+
+#loop-video__check:checked ~ #app {
+    display: block;
+}
+
+#loop-video__check:checked ~ #loop-video { 
+    display: none; 
+}
+
+
+@media (max-width: 890px) {
+    .loop-video__content {
+        width: auto;
+        left: -1950px;
+        top: -1000px;
+    }
+    
+    .loop-video__text {
+        padding: 0 40px;
+    }
+
+}
+
